@@ -1,0 +1,275 @@
+.skill-section {
+    padding: 50px 15px; /* Padding atas-bawah 50px, kiri-kanan 15px */
+}
+
+.skill-section .container {
+    padding: 30px 15px; /* Sedikit padding untuk container */
+}
+
+.skill-section h6.subtitle {
+    margin-bottom: 10px; /* Spasi kecil antara subtitle dan title */
+}
+
+.skill-section h2.section-title {
+    margin-bottom: 20px; /* Spasi kecil antara title dan paragraf */
+}
+
+.skill-section .row > div {
+    padding: 20px; /* Memberi ruang sekitar setiap kolom */
+}
+
+.card-custom {
+    overflow: hidden;
+    min-height: 450px;
+    box-shadow: 0 0 15px rgba(10, 10, 10, 0.3);
+  }
+  
+  .card-custom-img {
+    height: 200px;
+    min-height: 200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-color: inherit;
+  }
+  
+  /* First border-left-width setting is a fallback */
+  .card-custom-img::after {
+    position: absolute;
+    content: '';
+    top: 161px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-top-width: 40px;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 545px;
+    border-left-width: calc(575px - 5vw);
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: inherit;
+  }
+  
+  .card-custom-avatar img {
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(10, 10, 10, 0.3);
+    position: absolute;
+    top: 100px;
+    left: 1.25rem;
+    width: 100px;
+    height: 100px;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+.col-md-4 {
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+}
+h6{
+    width: 40px !important;
+}
+
+.portfolio-slider {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.portfolio-item {
+  flex: 1 1 30%; /* Membuat setiap item memiliki lebar 30% */
+  max-width: 30%; /* Membatasi lebar card agar tidak lebih dari 30% */
+  margin-bottom: 20px; /* Memberikan jarak antar card */
+}
+
+.card {
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Efek hover untuk mengangkat card */
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5); /* Transparansi latar belakang overlay */
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.card:hover .overlay {
+  opacity: 1;
+}
+
+.overlay-infos {
+  color: white;
+  text-align: center;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.card-text {
+  font-size: 14px;
+  color: #333;
+}
+
+.card-body a {
+  font-size: 18px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.card-body a:hover {
+  text-decoration: underline;
+}
+
+
+.divider-custom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.divider-custom-line {
+  width: 10%;
+  height: 2px;
+  background-color: #ddd;
+}
+
+.divider-custom-icon {
+  margin: 0 1rem;
+  font-size: 2rem;
+}
+
+/* General Card Styling */
+.card_service {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card_service:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Logo and Work Hover Effects */
+.logo {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.work {
+  transition: color 0.3s ease;
+}
+
+/* Hover Effects */
+.card_service:hover .logo {
+  color: #ff5722; /* Change color of logo on hover */
+  transform: scale(1.1); /* Slight zoom on logo */
+}
+
+.card_service:hover .work {
+  color: #ff5722; /* Change color of text on hover */
+}
+
+/* Default Styling for Logo */
+.card-body i {
+  font-size: 60px;
+  color: #42a5f5; /* Default color for icons */
+}
+
+.card-body img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+}
+
+/* Footer and Link Styling */
+.card-footer {
+  background-color: #ff5722;
+  color: #212121;
+  text-align: center;
+  padding: 15px;
+}
+
+.card-footer a {
+  color: #212121;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.card-footer a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/*fotrto*/
+
+.carousel-item img {
+    max-height: 500px;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.carousel-item img {
+  max-height: 400px; /* Atur tinggi maksimum gambar */
+  object-fit: cover; /* Pastikan gambar tetap memenuhi ruang tanpa terdistorsi */
+  width: 100%; /* Pastikan gambar mengisi lebar elemen */
+}
+
+.carousel-indicators {
+  bottom: -30px; /* Mengatur posisi titik navigasi agar lebih dekat dengan gambar */
+}
+
+.carousel-indicators li {
+  background-color: #007bff; /* Warna titik navigasi */
+  border-radius: 50%; /* Membuat titik navigasi menjadi bulat */
+  width: 10px; /* Ukuran titik */
+  height: 10px; /* Ukuran titik */
+}
+
+.carousel-indicators .active {
+  background-color: #343a40; /* Warna titik yang aktif */
+}
+
+footer {
+  background-color: #222;
+  color: #fff;
+  padding: 20px 0;
+}
+
+footer .list-inline-item a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+footer .list-inline-item a:hover {
+  color: #ddd;
+}
+
