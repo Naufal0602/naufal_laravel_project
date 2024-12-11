@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Admincontroller;
 use App\Http\Controllers\Admin_aboutController;
 use App\Http\Controllers\HomeController;
@@ -32,12 +33,12 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+Route::middleware(['auth', 'admin'])->group(function () {
+    Route::get('/admin/dashboard', [AdminController::class, 'index'])->name('admin');
+});
 
-Route::get('/admin/dashboard', [AdminController::class, 'index'])->middleware('auth', 'admin');
+
 require __DIR__ . '/auth.php';
-
-Route::get('/admin/dashboard', [Admincontroller::class, 'index'])->name('admin');
-//about
 Route::get('/admin/about', [Admin_aboutController::class, 'index'])->name('admin_about');
 Route::get('/admin/tambah_about', [Admin_aboutController::class, 'tambah_about'])->name('tambah_about');
 Route::post('/admin/submit_about', [Admin_aboutController::class, 'submit_about'])->name('admin.submit_about');
